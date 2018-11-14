@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ title }}</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="/index.js"></script>
+  </head>
+  <body>
+    <h1><center>Generar token</center></h1>
+    <form method="post" action="/">
+    <center>Ingrese palabra secreta: </center><br>
+    <center><input type="text" name="secretWord" id="secretWord" value ='{{value}}'></center>
+    <br>
+    <br>
+    <center><button name="btnToken" class="btn btn-primary" type="submit">Generar token</button></center>
+    <br>
+    <br>
+    <center>Token generado: </center><br>
+    <center><textarea id = "output" rows=3 cols=60 readonly>{{Token}}</textarea></center>
+    </form>  
+  </body>
+</html>
