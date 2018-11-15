@@ -1,0 +1,45 @@
+extends layout
+link(href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.0/flatly/bootstrap.min.css", rel="stylesheet")
+block content
+    form(action='/update', method="post")
+
+        label(for="nombre") Nombre:
+        br
+        input(type="text", name='newNombre', value=item.nombre)
+        br 
+        br
+        label(for="descripcion") Descripción:
+        br
+        input(type="text", name='newDescripcion', value=item.descripcion)
+        br
+        br 
+        label(for="ingredientes") Ingredientes:
+        br
+        input(type="text", name='newIngredientes', value=item.ingredientes)
+        br
+        br 
+        label(for="tipomasa") Tipo de masa:
+        br
+        input(type="text", name='newTipoMasa', value=item.tipomasa)
+        br
+        br 
+        label(for="tamano") Tamaño:
+        br
+        input(type="text", name='newTamano', value=item.tamano)
+        br
+        br 
+        label(for="cantidadporciones") Cantidad de porciones:
+        br
+        input(type="text", name='newCantidadPorciones', value=item.cantidadporciones)
+        br
+        br
+        label(for="tieneextraqueso") ¿Tiene extra queso?:
+        br
+        input(type="text", name='newExtraQueso', value=item.tieneextraqueso)
+        br
+        br
+        input(type="submit", value="Guardar", name="btchange")
+        input(type="hidden", value=item._id, name="valuesToDelete")
+
+    a(href='/goBack') Regresar 
+
