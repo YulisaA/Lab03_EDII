@@ -1,0 +1,78 @@
+extends layout
+
+block content
+  h1= title
+  link(href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.0/flatly/bootstrap.min.css", rel="stylesheet")
+  link(href='http://fonts.googleapis.com/css?family=Fjalla+One', rel='stylesheet', type='text/css')
+  link(href='http://fonts.googleapis.com/css?family=Open+Sans', rel='stylesheet', type='text/css')
+
+  th PIZZAS AGREGADAS
+  br
+  br
+  div.info
+  each item in pizzas
+    li 
+      = item.nombre
+
+      form(action="/#{item._id}/delete", method="post")
+        input(type="submit", value="Eliminar pizza", name="btDelete")
+        input(type="hidden", value=item._id, name="valuesToDelete")
+        br
+        br
+        a(href='/verPizza/#{item._id}') Mostrar  
+        a(href='/edit/#{item._id}') Editar       
+    hr
+    br
+  p  
+
+  div.contenedorsidebar
+
+  form(action="/addPizza", method="post") 
+    label(for="new") Ingresar nueva pizza:
+    br 
+    br
+    label(for="nombre") Nombre:
+    br
+    input(type="text", name="newNombre")
+    br 
+    br
+    label(for="descripcion") Descripción:
+    br
+    input(type="text", name="newDescripcion") 
+    br 
+    br
+    label(for="ingredientes") Ingredientes:
+    br
+    input(type="text", name="newIngredientes") 
+    br 
+    br
+    label(for="tipomasa") Tipo de masa:
+    br
+    input(type="text", name="newTipoMasa") 
+    br 
+    br
+    label(for="tamano") Tamaño:
+    br
+    input(type="text", name="newTamano") 
+    br 
+    br
+    label(for="cantidadporciones") Cantidad de porciones:
+    br
+    input(type="text", name="newCantidadPorciones") 
+    br 
+    br
+    label(for="tieneextraqueso") ¿Tiene extra queso?:
+    br
+    input(type="text", name="newExtraQueso") 
+    br 
+    br 
+    input(type="submit", name="add", value="Agregar")
+
+
+
+
+      
+        
+    
+      
+        

@@ -1,0 +1,18 @@
+extends layout
+link(href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.0/flatly/bootstrap.min.css", rel="stylesheet")
+block content
+    label(for="nombre") Nombre: #{item.nombre}
+    br 
+    label(for="descripcion") Descripción: #{item.descripcion}
+    br 
+    label(for="ingredientes") Ingredientes: #{item.ingredientes}
+    br 
+    label(for="tipomasa") Tipo de masa: #{item.tipomasa}
+    br 
+    label(for="tamano") Tamaño: #{item.tamano}
+    br 
+    label(for="cantidadporciones") Cantidad de porciones: #{item.cantidadporciones}
+    br 
+    label(for="tieneextraqueso") ¿Tiene extra queso?: #{item.tieneextraqueso}
+    br 
+    a(href='/goBack') Regresar 
